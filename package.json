@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MahdiAghaali/Awesome-books/issues"
   },
-  "homepage": "https://github.com/MahdiAghaali/Awesome-books#readme"
+  "homepage": "https://github.com/MahdiAghaali/Awesome-books#readme",
+  "devDependencies": {
+    "hint": "^7.1.2"
+  }
 }
