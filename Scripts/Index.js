@@ -15,23 +15,3 @@ function getBook() {
 
 const btnSubmitBook = document.getElementById('submitBook');
 btnSubmitBook.addEventListener('click', getBook);
-
-// eslint-disable-next-line no-unused-vars
-function switchTab(id) {
-  document.querySelectorAll('a').forEach((element) => {
-    element.classList.remove('active');
-  });
-  document.getElementById(id).classList.add('active');
-  id = id.substring(1);
-  document.querySelectorAll('section').forEach((element) => {
-    element.classList.add('hidden');
-  });
-  document.getElementById(id).classList.remove('hidden');
-}
-
-document.querySelectorAll('a').forEach((element) => {
-  element.addEventListener('click', (e) => {
-    e.preventDefault();
-    switchTab(e.target.id);
-  });
-});
