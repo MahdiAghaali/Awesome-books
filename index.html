@@ -10,23 +10,47 @@
 </head>
 
 <body>
-    <h1>All Awesome books</h1>
-    <ul id="bookList">
+    <header>
+        <span>All Awesome books</span>
+        <ul>
+            <li>
+                <a id="#list" class="active">List</a>
+            </li>
+            <li>
+                <a id="#addNew">Add New</a>
+            </li>
+            <li>
+                <a id="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <section id="list">
+        <h2>All awesome books</h2>
+        <ul id="bookList"></ul>
+    </section>
+    <section id="addNew" class="hidden">
+        <h2>Add new book</h2>
+        <form>
+            <label>
+                <input type="text" id="titleInput" placeholder="Title" />
+            </label>
+            <br>
+            <label>
+                <input type="text" id="authorInput" placeholder="Author" />
+            </label>
+            <br>
+            <button type="button" id="submitBook">Add</button>
+        </form>
+    </section>
+    <section id="contact" class="hidden">
+        <h2>Contact</h2>
+        <p>
 
-    </ul>
-    <span class="divider"></span>
-    <h2>Add new book</h2>
-    <form>
-        <label>
-            <input type="text" id="titleInput" placeholder="Title" />
-        </label>
-        <br>
-        <label>
-            <input type="text" id="authorInput" placeholder="Author" />
-        </label>
-        <br>
-        <button type="button" id="submitBook">Add</button>
-    </form>
+        </p>
+    </section>
+    <footer>
+        @copyright
+    </footer>
     <script src="./Scripts/Index.js" type="module"></script>
 </body>
 
