@@ -32,7 +32,7 @@ export default class Library {
                             "<span class="bookTitle">${Title}</span>" by 
                             <span class="bookAuthor">${Author}</span>
                             </div>
-                            <button type="button" class="removeBook" id='${i}' >Remove</button>
+                            <button type="button" class="removeBook" >Remove</button>
                         </li>
         `;
       bookList.insertAdjacentHTML('beforeend', bookString);
