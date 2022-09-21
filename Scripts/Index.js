@@ -1,11 +1,7 @@
 import Library from './Library.js';
+import bookArray from './bookArray.js';
 
 const Lib = new Library();
-const localStore = JSON.parse(localStorage.getItem('Library'));
-
-if (localStore) {
-  Lib.books = localStore.books;
-}
 
 Lib.updateList();
 

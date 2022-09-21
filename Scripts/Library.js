@@ -1,9 +1,10 @@
 import Book from './Book.js';
+import bookArray from './bookArray.js';
 
 export default class Library {
-  constructor() {
-    this.books = [];
-  }
+  constructor() {}
+
+  addToLocalStorage = () => localStorage.setItem('Library', JSON.stringify(libro))
 
   addBook() {
     const titleInputElement = document.getElementById('titleInput');
@@ -14,29 +15,59 @@ export default class Library {
     authorInputElement.value = '';
 
     const book = new Book(bookTitle, bookAuthor);
-    this.books.push(book);
-    this.updateList();
+    console.log(book)
+    const localStore = JSON.parse(localStorage.getItem('Library'));
+    console.log(localStore)
+    if (localStore) {
+    bookArray.push(...localStore);
+    } else {
+      bookArray;
+    }
+    console.log(localStore)
+    bookArray.push(book);
+    console.log(bookArray)
+    const showBook = () => {
+    bookList.innerHTML += `<li class="Book">
+                            <div class="bookTitle">${bookTitle}</div>
+                            <div class="bookAuthor">${bookAuthor}</div>
+                            <button type="button" class="removeBook" onclick="Lib.removeBook(${bookArray.length})">Remove</button>
+                        </li>`
+    }
+    showBook()
+      localStorage.setItem('Library', JSON.stringify(bookArray))
+    //this.addToLocalStorage
+
+
   }
 
   removeBook(index) {
-    this.books.splice(index, 1);
+    bookArray.splice(index, 1);
+    localStorage.setItem('Library', JSON.stringify(bookArray));
   }
 
-  updateList() {
+    updateList() {
     const bookList = document.getElementById('bookList');
-    bookList.innerHTML = '';
-    for (let i = 0; i < this.books.length; i += 1) {
-      const {
+      bookList.innerHTML = '';
+    const localStore = JSON.parse(localStorage.getItem('Library'))
+    if (localStore) {
+    bookArray.push(...localStore);
+    } else {
+      bookArray;
+    }
+
+    for (let i = 0; i < bookArray.length; i += 1) {
+      /* const {
         bookTitle, bookAuthor,
-      } = this.books[i];
+      } = this.books[i];*/
       const bookString = `<li class="Book">
-                            <div class="bookTitle">${bookTitle}</div>
-                            <div class="bookAuthor">${bookAuthor}</div>
+                            <div class="bookTitle">${bookArray[i].Title}</div>
+                            <div class="bookAuthor">${bookArray[i].Author}</div>
                             <button type="button" class="removeBook" onclick="Lib.removeBook(${i})">Remove</button>
                         </li>
         `;
       bookList.insertAdjacentHTML('beforeend', bookString);
     }
-    localStorage.setItem('Library', JSON.stringify(this));
+    localStorage.setItem('Library', JSON.stringify(bookArray));
   }
-}
+
+  }
