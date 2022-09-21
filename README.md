@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Description the project.
+> "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
 
 
 ## Built With
@@ -11,9 +11,14 @@
 - HTML5
 - CSS3
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://livedemo.com)
+
+## How to use
+
+1. Clone the project using "git clone https://github.com/MahdiAghaali/Awesome-books"
+2. Run the projec on a server (example: [live server on vscode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
 
 ## Authors
 
