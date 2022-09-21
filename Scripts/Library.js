@@ -28,8 +28,10 @@ export default class Library {
         Title, Author,
       } = this.books[i];
       const bookString = `<li class="Book">
-                            <div class="bookTitle">${Title}</div>
-                            <div class="bookAuthor">${Author}</div>
+                            <div>
+                            "<span class="bookTitle">${Title}</span>" by 
+                            <span class="bookAuthor">${Author}</span>
+                            </div>
                             <button type="button" class="removeBook" id='${i}' >Remove</button>
                         </li>
         `;
