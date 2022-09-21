@@ -6,30 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome books</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <h1>Awesome book management</h1>
-    <h2>Book List</h2>
+    <h1>All Awesome books</h1>
     <ul id="bookList">
 
     </ul>
-    <hr>
+    <span class="divider"></span>
     <h2>Add new book</h2>
     <form>
         <label>
-            <span>Book Title</span>
-            <input type="text" id="titleInput" />
+            <input type="text" id="titleInput" placeholder="Title" />
         </label>
         <br>
         <label>
-            <span>Book Author</span>
-            <input type="text" id="authorInput" />
+            <input type="text" id="authorInput" placeholder="Author" />
         </label>
         <br>
         <button type="button" id="submitBook">Add</button>
     </form>
-    <script src="./Scripts/Index.js"></script>
+    <script src="./Scripts/Index.js" type="module"></script>
 </body>
 
 </html>
